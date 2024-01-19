@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: multiarch-manager-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: multiarch-manager-operator
+    app.kubernetes.io/part-of: multiarch-manager-operator
+  name: multiarch-manager-operatokost
+spec:
+  port:
+    targetPort: 5001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: multiarch-manager-operator
+    weight: 100
+status: {}

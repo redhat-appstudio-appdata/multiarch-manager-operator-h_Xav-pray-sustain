@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: multiarch-manager-operator
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/psundara-tenant/multiarch-manager-operator/multiarch-manager-operator@sha256:272d6d3dc102449a124b4d06bfb25a01a451bb4df684140901c7d6cfb5f914a0
+        name: container-image
+        resources: {}
+status: {}
