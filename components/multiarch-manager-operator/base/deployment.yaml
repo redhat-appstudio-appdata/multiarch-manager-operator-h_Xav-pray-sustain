@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: multiarch-manager-operator
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/psundara-tenant/multiarch-manager-operator/multiarch-manager-operator@sha256:272d6d3dc102449a124b4d06bfb25a01a451bb4df684140901c7d6cfb5f914a0
         imagePullPolicy: Always
         name: container-image
         ports:
