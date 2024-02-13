@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/part-of: multiarch-manager-operator
   name: multiarch-manager-operator
 spec:
-  replicas: 1
+  replicas: 0
   revisionHistoryLimit: 0
   selector:
     matchLabels:
